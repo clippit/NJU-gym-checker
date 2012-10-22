@@ -8,7 +8,7 @@ require 'function.php';
 
 if (isset($_POST['num'])) {
 	$num = trim($_POST['num']);
-	if (preg_match('/(09)|(10)|(11)\d{7}/', $num) == 0) {
+	if (preg_match('/(10)|(11)|(12)\d{7}/', $num) == 0) {
 		echo json_encode('Student ID Error!');
 	} else {
 		echo json_encode(query($num));

@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 	$("#singlebox").submit(function() {
 		var studentID = $("input#num").val(),
-			re = /^(09|10|11)\d{7}$/,
+			re = /^(10|11|12)\d{7}$/,
 			$submit = $(".submit"),
 			$loadingSpinner = $(".loadingspinner:eq(0)");
 		$submit.attr("disabled", "disabled");
@@ -133,7 +133,7 @@ $(document).ready(function() {
 	$("#batchbox").submit(function() {
 		var studentID1 = $("input#num1").val(),
 			studentID2 = $("input#num2").val(),
-			re = /^(09|10|11)\d{7}$/,
+			re = /^(10|11|12)\d{7}$/,
 			$submit = $(".submit"),
 			$loadingSpinner = $(".loadingspinner:eq(1)"),
 			$gboxBatchDetails = $("#gbox_batchdetails"),

@@ -35,7 +35,7 @@ echo $_SERVER ['PHP_SELF'];
 
 if ($_POST ['num']) {
 	$num = trim($_POST ['num']);
-	if (preg_match('/(09)|(10)|(11)\d{7}/', $num) == 0) {
+	if (preg_match('/(10)|(11)|(12)\d{7}/', $num) == 0) {
 		$error = '学号格式有误！';
 	}
 	if (! isset($error)) {
@@ -72,10 +72,10 @@ if (isset($_POST ['num1']) && isset($_POST ['num2'])) {
 	$error = array ();
 	$num1 = trim($_POST ['num1']);
 	$num2 = trim($_POST ['num2']);
-	if (preg_match('/(10)\(11)\d{7}/', $num1) == 0) {
+	if (preg_match('/(11)\(12)\d{7}/', $num1) == 0) {
 		$error [] = '第一个学号输入有误！';
 	}
-	if (preg_match('/(10)|(11)\d{7}/', $num2) == 0 || $num2 < $num1) {
+	if (preg_match('/(11)|(12)\d{7}/', $num2) == 0 || $num2 < $num1) {
 		$error [] = '第二个学号输入有误！';
 	}
 	if ($num2 - $num1 > 30) {
